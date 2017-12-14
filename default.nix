@@ -12,7 +12,7 @@ let
     , targets ? [ "Main" ]
     }:
     let
-      sources = import srcs { inherit fetchzip; };
+      sources = import srcs { inherit fetchzip fetchgit; };
       exactDependencies = builtins.toFile "exact-dependencies.json"
         (builtins.toJSON (lib.mapAttrs (name: value: value.version) sources));
     in stdenv.mkDerivation {

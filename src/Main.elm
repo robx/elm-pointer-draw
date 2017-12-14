@@ -135,7 +135,7 @@ onPointerDown : Html.Attribute Msg
 onPointerDown =
     Pointer.onWithOptions
         "pointerdown"
-        { stopPropagation = False, preventDefault = True }
+        { stopPropagation = False, preventDefault = True, capturePointer = True, releasePointer = False }
         (\e -> DrawStart e.pointer.offsetPos)
 
 
@@ -146,4 +146,7 @@ onPointerMove =
 
 onPointerUp : Html.Attribute Msg
 onPointerUp =
-    Pointer.onUp (\e -> DrawEnd)
+    Pointer.onWithOptions
+        "pointerup"
+        { stopPropagation = False, preventDefault = True, capturePointer = False, releasePointer = True }
+        (\e -> DrawEnd)

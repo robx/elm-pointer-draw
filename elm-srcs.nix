@@ -1,4 +1,4 @@
-{ fetchzip }: {
+{ fetchzip, fetchgit }: {
   "elm-lang/core" = {
     src = fetchzip {
       url = "https://github.com/elm-lang/core/archive/5.1.1.zip";
@@ -14,16 +14,18 @@
     version = "1.1.1";
   };
   "elm-lang/html" = {
-    src = fetchzip {
-      url = "https://github.com/elm-lang/html/archive/2.0.0.zip";
-      sha256 = "08mxkcb1548fcvc1p7r3g1ycrdwmfkyma24jf72238lf7j4ps4ng";
+    src = fetchgit {
+      url = "https://github.com/robx/html.git";
+      rev = "2ea7b8e230a79e8082c5803b80158ef4a4254470";
+      sha256 = "079wk9fafld8868hv0j0v1g7jagczvcbpi4b3y7kb17xkzhs4jav";
     };
     version = "2.0.0";
   };
   "elm-lang/virtual-dom" = {
-    src = fetchzip {
-      url = "https://github.com/elm-lang/virtual-dom/archive/2.0.4.zip";
-      sha256 = "1zydzzhpxivpzddnxjsjlwc18kaya1l4f8zsgs22wkq25izkin33";
+    src = fetchgit {
+      url = "https://github.com/robx/virtual-dom.git";
+      rev = "41853b2b8e14f8a12dedd3cc4195187fc1aff0de";
+      sha256 = "";
     };
     version = "2.0.4";
   };
@@ -35,16 +37,18 @@
     version = "1.0.1";
   };
   "mpizenberg/elm-mouse-events" = {
-    src = fetchzip {
-      url = "https://github.com/mpizenberg/elm-mouse-events/archive/2.0.0.zip";
-      sha256 = "12k0kajd08l848yd0693585smffdbfwaz90fq6fm56ibyi874k55";
+    src = fetchgit {
+      url = "https://github.com/robx/elm-mouse-events.git";
+      rev = "e88c9f42d58e16725271c1cdcdbf4265a7b60a0a";
+      sha256 = "1mnns8dr051527lijk4sdwi3y0k5i6g9rl9nzh2xdbipphhyq2wz";
     };
     version = "2.0.0";
   };
   "mpizenberg/elm-pointer-events" = {
-    src = fetchzip {
-      url = "https://github.com/mpizenberg/elm-pointer-events/archive/1.0.5.zip";
-      sha256 = "0vg8xi3syqdkq1qihg68vj91lfam88ag4pmzrladp131n1cr9fqw";
+    src = fetchgit {
+      url = "https://github.com/robx/elm-pointer-events.git";
+      rev = "dece13d997479bd5217e32dda204a2b862cbf6ab";
+      sha256 = "1my3fx2zsh8vzgyg2vfrfgafvwbbv2m5v073im3w2cxnjf1dbg6c";
     };
     version = "1.0.5";
   };
