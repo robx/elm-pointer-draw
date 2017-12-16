@@ -1,0 +1,6 @@
+[submodule "elm-pointer-events"]
+	path = elm-pointer-events
+	url = git@github.com:mpizenberg/elm-pointer-events.git
+[submodule "elm-pep"]
+	path = elm-pep
+	url = git@github.com:mpizenberg/elm-pep.git
