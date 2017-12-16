@@ -3,4 +3,4 @@
 	url = git@github.com:mpizenberg/elm-pointer-events.git
 [submodule "elm-pep"]
 	path = elm-pep
-	url = git@github.com:mpizenberg/elm-pep.git
+	url = git@github.com:robx/elm-pep.git
