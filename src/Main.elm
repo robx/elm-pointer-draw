@@ -122,6 +122,7 @@ view model =
         , onPointerMove
         , onPointerUp
         , Html.style [ ( "touch-action", "none" ) ]
+        , Html.attribute "onPointerDown" "event.target.setPointerCapture(event.pointerId);"
         ]
         [ Element.toHtml <| Element.layers [ Collage.collage 400 400 (List.reverse drawing) ] ]
 
