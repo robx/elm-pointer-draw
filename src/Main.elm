@@ -124,7 +124,19 @@ view model =
         , Html.style [ ( "touch-action", "none" ) ]
         , Html.attribute "onPointerDown" "event.target.setPointerCapture(event.pointerId);"
         ]
-        [ Element.toHtml <| Element.layers [ Collage.collage 400 400 (List.reverse drawing) ] ]
+        [ Element.toHtml <| Element.layers [ Collage.collage 400 400 (List.reverse drawing) ]
+        , Html.div
+            [ Html.style
+                [ ( "width", "300px" )
+                , ( "height", "300px" )
+                , ( "background", "rgba(0,0,255,0.1)" )
+                , ( "position", "relative" )
+                , ( "left", "50px" )
+                , ( "top", "-350px" )
+                ]
+            ]
+            []
+        ]
 
 
 subscriptions : Model -> Sub Msg
